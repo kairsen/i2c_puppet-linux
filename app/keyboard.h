@@ -22,24 +22,24 @@ enum key_mod
 	KEY_MOD_ID_LAST,
 };
 
-#define KEY_JOY_UP		0x01
-#define KEY_JOY_DOWN	0x02
-#define KEY_JOY_LEFT	0x03
-#define KEY_JOY_RIGHT	0x04
-#define KEY_JOY_CENTER	0x05
-#define KEY_BTN_LEFT1	0x06
-#define KEY_BTN_RIGHT1	0x07
+#define KEY_JOY_UP		0x81
+#define KEY_JOY_DOWN	0x82
+#define KEY_JOY_LEFT	0x83
+#define KEY_JOY_RIGHT	0x84
+#define KEY_JOY_CENTER	0x85
+#define KEY_BTN_LEFT1	0x86
+#define KEY_BTN_RIGHT1	0x87
 // 0x08 - BACKSPACE
 // 0x09 - TAB
 // 0x0A - NEW LINE
 // 0x0D - CARRIAGE RETURN
-#define KEY_BTN_LEFT2	0x11
-#define KEY_BTN_RIGHT2	0x12
+#define KEY_BTN_LEFT2	0x91
+#define KEY_BTN_RIGHT2	0x92
 
-#define KEY_MOD_ALT		0x1A
-#define KEY_MOD_SHL		0x1B // Left Shift
-#define KEY_MOD_SHR		0x1C // Right Shift
-#define KEY_MOD_SYM		0x1D
+#define KEY_MOD_ALT		0x9A
+#define KEY_MOD_SHL		0x9B // Left Shift
+#define KEY_MOD_SHR		0x9C // Right Shift
+#define KEY_MOD_SYM		0x9D
 
 struct key_callback
 {
