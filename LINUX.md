@@ -14,10 +14,10 @@ The original definiton of the keys were this
 
 |      | L1    | L2    |    R1 |    R2 | SPKR | Mic| BS| NL|  SPACE  |
 | ------|-------|-------|-------|-------|------|----|---|---|---------|
-| <none>|       |       |       |       |  $   |  ~ | \b| \n| <space> |
-| Alt   |       |       |       |       |  `   |  0 |   |   |         |
+| \<none\>|       |       |       |       |  $   |  ~ | \b| \n| \<space\> |
+| Alt   |       |       |       |       |  \`  |  0 |   |   |         |
 | Shift |       |       |       |       |  $   |    |   |   |         |
-| Sym   |       |       |       |       |  $   |    |   |\| |  <tab>  |
+| Sym   |       |       |       |       |  $   |    |   |\| |  \<tab\>  |
 
 
 
@@ -25,10 +25,10 @@ This firmware adds the following mappings
 
 |      | L1     | L2    |    R1 |    R2 | SPKR | Mic| BS| NL|  SPACE  |
 | ------|--------|-------|-------|-------|------|----|---|---|---------|
-| <none>|<escape>|  %    |  =    |  \\   |  $   |  ~ | \b| \n| <space> |
-| Alt   |  >     |  ]    |  }    |  &    |  `   |  0 |   |   |         |
+| \<none\>|\<escape\>|  %    |  =    |  \\   |  $   |  ~ | \b| \n| \<space\> |
+| Alt   |  >     |  ]    |  }    |  &    |  \`  |  0 |   |   |         |
 | Shift |  <     |  ]    |  {    |  ^    |  $   |  ~ | \b|   |         |
-| Sym   |        |       |       |       |  $   |  ~ | \b|\| |  <tab>  |
+| Sym   |        |       |       |       |  $   |  ~ | \b|\| |  \<tab\>  |
 
 ## Linux Debug tips
 
