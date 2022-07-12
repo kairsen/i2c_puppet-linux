@@ -12,12 +12,12 @@ The following changes have been made
 
 The original definiton of the keys were this 
 
-|      | L1    | L2    |    R1 |    R2 | SPKR | Mic| BS| NL|  SPACE  |
+|      | L1    | L2    |    R1 |    R2 | SPKR | Mic| BS | NL |  SPACE  |
 | ------|-------|-------|-------|-------|------|----|---|---|---------|
-| none  |       |       |       |       |  $   |  ~ | \b| \n| space |
+| none  |       |       |       |       |  $   |  ~ | \b| \n| space   |
 | Alt   |       |       |       |       |  \`  |  0 |   |   |         |
 | Shift |       |       |       |       |  $   |    |   |   |         |
-| Sym   |       |       |       |       |  $   |    |   |\| |  tab  |
+| Sym   |       |       |       |       |  $   |    |   |\| |  tab    |
 
 
 
