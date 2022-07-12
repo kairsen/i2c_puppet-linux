@@ -1,5 +1,8 @@
 # I2C Puppet mods for Linux systems
 
+
+This is a modification to the <a href="https:README.md" target="_blank">standard firmware</a>
+
 The original version lacked certain characters, such as  <ESCAPE>, and the characters "<>{}[]^&%=\"
 which made it difficult to use on Linux systems
     
@@ -13,27 +16,38 @@ The following changes have been made
 The original definiton of the keys were this. I'm including the
 spacebar, newline/enter, backspace, Microphone and Spkeaer keys
 because they provide characters not indicated on the key. For
-instance, SYM + spacebar provides TAB
+instance, ALT + spacebar provides TAB, and ALT+NewLine is the pipe character. 
 
 
 |      | L1    | L2    |    R1 |    R2 | SPKR | Mic| BS | NL |  SPACE  |
-| ------|-------|-------|-------|-------|------|----|---|---|---------|
-| none  |       |       |       |       |  $   |  ~ | \b| \n| SPACE   |
-| Alt   |       |       |       |       |  \`  |  0 |   |   |         |
-| Shift |       |       |       |       |  $   |    |   |   |         |
-| Sym   |       |       |       |       |  $   |    |   |\| |  TAB   |
+| ------|-------|-------|-------|-------|------|----|---|----|---------|
+| none  |       |       |       |       |  $   |  ~ | \b| \n | SPACE   |
+| Alt   |       |       |       |       |  \`  |  0 |   | \| |  TAB   |
+| Shift |       |       |       |       |  $   |    |   |    |         |
+| Sym   |       |       |       |       |  $   |    |   |    |     |
 
 
 
 This firmware adds the following mappings
 
 
-|      | L1     | L2    |    R1 |    R2 | SPKR | Mic| BS| NL|  SPACE  |
-| ------|--------|-------|-------|-------|------|----|---|---|---------|
-| none  | escape |  %    |  =    |  \\   |  $   |  ~ | \b| \n| SPACE |
-| Alt   |  >     |  ]    |  }    |  &    |  \`  |  0 |   |   |         |
-| Shift |  <     |  ]    |  {    |  ^    |  $   |  ~ | \b|   |         |
-| Sym   |        |       |       |       |  $   |  ~ | \b|\| |  TAB |
+|       | L1     | L2    |    R1 |    R2 | SPKR | Mic| BS| NL |  SPACE  |
+| ------|--------|-------|-------|-------|------|----|---|----|---------|
+| none  | ESCAPE |  %    |  =    |  \\   |  $   |  ~ | \b| \n | SPACE   |
+| Alt   |  >     |  ]    |  }    |  &    |  \`  |  0 |   | \| |  TAB    |
+| Shift |  <     |  [    |  {    |  ^    |  $   |  ~ | \b|    |         |
+| Sym   |  x     |  x    |  x    |  x    |  $   |  ~ | \b|    |         |
+
+
+
+I tried to make the bracket characters easierr to remember by using
+Shift+ to indicate the left-pointing brackets, and Alt+ corresponds to
+the same right-pointing bracket. You can redefine these keys if you
+prefer a different arraingment.
+
+Currently, SYM+<top button keys> produces an 'x' to indicate some value can be inserted.
+I'm considering mapping these to the 4 arrow keys
+
 
 ## Linux Debug tips
 
@@ -64,16 +78,16 @@ keyboard when a key is pressed..
 
 ## Compiling firmware on Linux
 
-I edit the files in <GIT>/ic2_puppet/all/ using my preferred
-editor. In my case, I use emacs. I have the keystroke combination
+I edit the files in <GIT>/ic2_puppet/all/ using emacs. 
+I have the keystroke combination
 "Control-C M" bound to compile, using
 
     (global-set-key "\C-cm" 'compile)
 
-And when I press these keys, emacs saves all files, and recompiles the
+And when I press "Control-c M", emacs saves all files, and recompiles the
 code. I have a small hub with switchable on/off ports, and restart the
 keyboard into boot mode, and then do a "make install" to load the new
-firmware
+firmware. But you can also use vim. The makefile assumes the compiled version is in ../build.
 
 ## GUI Login
 
