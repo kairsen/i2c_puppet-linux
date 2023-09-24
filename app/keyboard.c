@@ -166,7 +166,7 @@ static void transition_to(struct list_item * const p_item, const enum key_state 
                         } else if (control) {
                           key = KEY_JOY_DOWN;
                         } else {
-                          key = '\\';
+                          key =0x09; // TAB
                         }
                         break;
                       default:
