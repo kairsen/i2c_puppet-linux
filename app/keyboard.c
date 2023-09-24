@@ -45,7 +45,7 @@ static const struct entry kbd_entries[][NUM_OF_COLS] =
 	{ { },                 { ' ', '\t' },             { 'C', '9' },              { 'Z', '7' },              { 'M', '.'  },  { 'N', ','  } },
 	{ { KEY_BTN_LEFT2 },   { .mod = KEY_MOD_ID_SYM }, { 'T', '(' },              { 'D', '5' },              { 'I', '-'  },  { 'Y', ')'  } },
 	{ { KEY_BTN_RIGHT1 },  { .mod = KEY_MOD_ID_ALT }, { 'V', '?' },              { 'X', '8' },              { '$', '`'  },  { 'B', '!'  } },
-	{ { },                 { 'A', '*' },              { .mod = KEY_MOD_ID_SHR }, { 'P', '@' },              { '\b' },       { '\n', '|' } },
+	{ { },                 { 'A', '*' },              { .mod = KEY_MOD_ID_SHR }, { 'P', '@' },              { '\b', '\b' }, { '\n', '|' } },
 };
 
 #if NUM_OF_BTNS > 0
@@ -131,7 +131,7 @@ static void transition_to(struct list_item * const p_item, const enum key_state 
                         } else if (shift) {
                           key = '<';
                         } else if (control) {
-                          key = 'x';
+                          key = KEY_JOY_UP;
                         } else {
                           key =0x1B; // ESC
                         }
@@ -142,7 +142,7 @@ static void transition_to(struct list_item * const p_item, const enum key_state 
                         } else if (shift) {
                           key = '[';
                         } else if (control) {
-                          key ='x';
+                          key = KEY_JOY_LEFT;
                         } else {
                           key = '%';
                         }
@@ -153,7 +153,7 @@ static void transition_to(struct list_item * const p_item, const enum key_state 
                         } else if (shift) {
                           key = '{';
                         } else if (control) {
-                          key = 'x';
+                          key = KEY_JOY_RIGHT;
                         } else {
                           key = '=';
                         }
@@ -164,7 +164,7 @@ static void transition_to(struct list_item * const p_item, const enum key_state 
                         } else if (shift) {
                           key = '^';
                         } else if (control) {
-                          key = 'x'; // TODO
+                          key = KEY_JOY_DOWN;
                         } else {
                           key = '\\';
                         }
