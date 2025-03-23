@@ -22,7 +22,7 @@ jobs:
 
         steps:
             - name: Setup cmake
-              uses: jwlawson/actions-setup-cmake@v1.13.0
+              uses: jwlawson/actions-setup-cmake@v2
 
             - name: Setup arm-none-eabi-gcc
               uses: fiam/arm-none-eabi-gcc@v1
