@@ -25,9 +25,9 @@ jobs:
               uses: jwlawson/actions-setup-cmake@v2
 
             - name: Setup arm-none-eabi-gcc
-              uses: fiam/arm-none-eabi-gcc@v1
+              uses: carlosperate/arm-none-eabi-gcc-action@v1
               with:
-                release: '10-2020-q4'
+                release: '14.2.Rel1' # <-- The compiler release to use
 
             - name: Clone repo
               uses: actions/checkout@v4
